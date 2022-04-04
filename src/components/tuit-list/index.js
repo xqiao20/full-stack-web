@@ -9,7 +9,7 @@ import {
 const TuitList = () => {
   const tuits = useSelector(
     state => state.tuits);
-  const [newTuit, setNewTuit] = useState({tuit: 'New tuit', likes: 0});
+  const [newTuit, setNewTuit] = useState({tuit: 'New tuit', likes: 0, dislikes: 0});
   const dispatch = useDispatch();
   useEffect(() => 
       findAllTuits(dispatch),
@@ -35,6 +35,13 @@ const TuitList = () => {
                 ...tuit, likes: tuit.likes + 1
               })} className="far fa-thumbs-up ms-2"></i>
             </div>
+            <div>
+              Dislikes: {tuit.dislikes}
+              <i onClick={() => updateTuit(dispatch, {
+                ...tuit, dislikes: tuit.dislikes + 1
+              })} className="far fa-thumbs-down ms-2"></i>
+            </div>
+
           </li>)
       }
     </ul>
