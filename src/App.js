@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import './vendors/bootstrap/css/bootstrap.min.css';
 import './vendors/fontawesome/css/all.min.css';
+import './vendors/bootstrap/bootstrap.min.css';
 import HelloWorld from './components/hello-world';
 import HomeScreen from "./components/tuiter/HomeScreen";
 import ExploreScreen from "./components/tuiter/ExploreScreen";
